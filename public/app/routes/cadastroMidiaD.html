@@ -1,0 +1,66 @@
+<div ng-cloak ng-controller="mDigitalCtrl as md">
+  <div class="container baixar">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h3>Cadastro de Mídia Digital</h3>
+          </div>
+
+          <div class="panel-body">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <div class="col-md-12">
+                  <label for="nome" class="control-label">Título</label>
+                  <input class="form-control" type="text" ng-model="md.titulo" value="">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-md-12">
+                  <label for="sobrenome">Autor</label>
+                  <input class="form-control" type="text" ng-model="md.autor" value="">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-md-6">
+                  <label for="nome" class="control-label">ISSN</label>
+                  <input class="form-control" type="text" ng-model="md.issn" value="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="name" class="control-label">Gênero</label>
+                  <select class="form-control" name="genero" ng-model="md.genero">
+                    <option></option>
+                    <option>Ação</option>
+                    <option>Aventura</option>
+                    <option>Terror</option>
+                    <option>Ficção Científica</option>
+                    <option>Didáticos</option>
+                    <option>Científicos</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+            <div class="panel-footer text-right">
+              <button type="submit" name="button" class="btn btn-danger"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="Clique para cancelar">
+              Limpar
+            </button>
+            <button type="submit" name="button" class="btn btn-success"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Clique para cadastrar"
+            ng-click="md.cadastrarMDigital()">
+            Cadastrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

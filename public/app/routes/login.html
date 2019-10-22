@@ -1,0 +1,81 @@
+<div  ng-cloak ng-controller="authCtrl as a">
+  <style media="screen">
+    .navbar .navbar-nav {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+      text-align: center;
+    }
+  </style>
+  <nav class="navbar navbar-default navbar-fixed-top" ng-show="true">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav text-center">
+          <li><a>Biblioteca IFPB-Campus Picuí <span></span></a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <style media="screen">
+    .baixarLogin{
+      margin-top: 65px;
+    }
+  </style>
+
+  <div class="baixarLogin">
+    <center><img width="200px" height="200px" src="../images/logo.png"/></center>
+  </div>
+  <div  class="{{a.esconder}}">
+    <div class="alert {{a.evento}} alert-dismissable col-md-offset-4 col-md-4">
+      <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong>{{a.mensagem}} </strong>{{a.mensagem2}}
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading text-center">
+            <h3>Entrar</h3>
+          </div>
+          <div class="panel-body">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <div class="col-md-12">
+                  <label for="nome" class="control-label">Matrícula</label>
+                  <input class="form-control" type="text" name="login" ng-model="a.matricula" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-12">
+                  <label for="nome" class="control-label">Senha</label>
+                  <input class="form-control" type="password" name="senha" ng-model="a.senha" value="">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="panel-footer text-right">
+            <button type="submit" name="button" class="btn btn-default"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Clique para cancelar">
+            Solicitar Cadastro
+            </button>
+            <button type="submit" name="button" class="btn btn-success"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Clique para logar"
+            ng-click="a.autenticar()">
+            Logar
+            </button>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

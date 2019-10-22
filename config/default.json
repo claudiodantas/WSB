@@ -1,0 +1,5 @@
+{
+"ambiente": "Aplicação rodando na porta 3000!",
+"database": "mongodb://localhost:27017/WSB",
+"secret": "123"
+}
